@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+  
   const services = [
     {
       title: "AI Process Automation",
@@ -11,7 +14,8 @@ const Services = () => {
         "Intelligent document processing",
         "Process optimization",
         "24/7 automated operations"
-      ]
+      ],
+      path: "/services/process-automation"
     },
     {
       title: "Predictive Analytics",
@@ -21,7 +25,8 @@ const Services = () => {
         "Trend forecasting",
         "Risk analysis",
         "Performance optimization"
-      ]
+      ],
+      path: "/services/data-analytics"
     },
     {
       title: "Custom AI Development",
@@ -31,7 +36,8 @@ const Services = () => {
         "Integration services",
         "Scalable architecture",
         "Ongoing support"
-      ]
+      ],
+      path: "/services/custom-solutions"
     }
   ];
 
@@ -69,7 +75,10 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full bg-[#9b87f5] hover:bg-[#8a74f4] text-white">
+              <Button 
+                className="w-full bg-[#9b87f5] hover:bg-[#8a74f4] text-white"
+                onClick={() => navigate(service.path)}
+              >
                 Learn More
               </Button>
             </motion.div>
