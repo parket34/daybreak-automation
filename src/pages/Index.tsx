@@ -6,6 +6,10 @@ import { useNavigate } from "react-router-dom";
 const Index = () => {
   const navigate = useNavigate();
 
+  const handleBooking = () => {
+    window.open('https://calendly.com/tomparker-8be/asi-booking', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-[#1A1F2C] to-gray-900">
       <div className="container mx-auto px-4 py-16">
@@ -29,7 +33,7 @@ const Index = () => {
             className="space-x-4"
           >
             <Button 
-              onClick={() => navigate("/book")}
+              onClick={handleBooking}
               size="lg"
               className="bg-[#9b87f5] hover:bg-[#8a74f4] text-white"
             >
