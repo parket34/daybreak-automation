@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Home } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-[#1A1F2C] to-gray-900 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-[#1A1F2C] to-gray-900 flex flex-col">
       <div className="container mx-auto px-4">
         <div className="flex justify-start mb-8">
           <Button 
@@ -97,6 +98,7 @@ const Services = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

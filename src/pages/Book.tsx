@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const Book = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-[#1A1F2C] to-gray-900 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-[#1A1F2C] to-gray-900 flex flex-col">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,6 +28,7 @@ const Book = () => {
           </div>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };
