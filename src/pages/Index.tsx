@@ -45,7 +45,7 @@ const Index = () => {
               onClick={() => navigate("/services")}
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-gray-900"
+              className="text-white border-white hover:bg-white hover:text-gray-900 hover:scale-105 transition-transform"
             >
               Explore Services
             </Button>
@@ -176,6 +176,7 @@ const Index = () => {
             ))}
           </div>
         </motion.div>
+
       </div>
       <Footer />
     </div>
