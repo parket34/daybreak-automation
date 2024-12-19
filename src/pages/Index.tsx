@@ -83,7 +83,6 @@ const Index = () => {
           ))}
         </motion.div>
 
-        {/* New Benefits Section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,32 +97,47 @@ const Index = () => {
               {
                 metric: "20+ Hours",
                 label: "Saved Per Week",
-                description: "Automate repetitive tasks and streamline workflows"
+                description: "Automate repetitive tasks and streamline workflows",
+                expandedDetails: "Our AI solutions automate data entry, report generation, customer support responses, and routine administrative tasks. Clients typically save 4-5 hours per day, allowing teams to focus on strategic initiatives and high-value activities."
               },
               {
                 metric: "35%",
                 label: "Revenue Increase",
-                description: "Through optimized operations and enhanced decision making"
+                description: "Through optimized operations and enhanced decision making",
+                expandedDetails: "By leveraging predictive analytics and automated customer engagement, businesses see significant revenue growth. This includes improved lead conversion rates, optimized pricing strategies, and increased customer lifetime value through personalized experiences."
               },
               {
                 metric: "60%",
                 label: "Error Reduction",
-                description: "Minimize human error in critical processes"
+                description: "Minimize human error in critical processes",
+                expandedDetails: "AI-powered validation and verification systems catch errors in real-time, ensuring data accuracy and compliance. This leads to reduced rework, improved quality control, and enhanced regulatory compliance across all business processes."
               },
               {
                 metric: "24/7",
                 label: "Operation Capability",
-                description: "Continuous automated processing without interruption"
+                description: "Continuous automated processing without interruption",
+                expandedDetails: "Our AI systems work around the clock, processing requests, monitoring systems, and responding to customer needs at any hour. This ensures consistent service delivery, faster response times, and improved customer satisfaction across all time zones."
               }
             ].map((benefit, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-[#1A1F2C]/80 p-8 rounded-xl border border-gray-800 hover:border-[#9b87f5] transition-colors text-center"
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.2 }
+                }}
+                className="group relative bg-[#1A1F2C]/80 p-8 rounded-xl border border-gray-800 hover:border-[#9b87f5] transition-all duration-300 min-h-[200px] hover:min-h-[300px]"
               >
-                <h3 className="text-4xl font-bold text-[#9b87f5] mb-2">{benefit.metric}</h3>
-                <h4 className="text-xl font-semibold text-white mb-3">{benefit.label}</h4>
-                <p className="text-gray-400 text-sm">{benefit.description}</p>
+                <div className="transition-opacity duration-300 group-hover:opacity-0">
+                  <h3 className="text-4xl font-bold text-[#9b87f5] mb-2">{benefit.metric}</h3>
+                  <h4 className="text-xl font-semibold text-white mb-3">{benefit.label}</h4>
+                  <p className="text-gray-400 text-sm">{benefit.description}</p>
+                </div>
+                
+                <div className="absolute inset-0 p-8 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center bg-[#1A1F2C] border border-[#9b87f5]">
+                  <p className="text-white text-sm leading-relaxed">
+                    {benefit.expandedDetails}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
