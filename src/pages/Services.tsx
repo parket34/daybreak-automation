@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { Home } from "lucide-react";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -44,6 +45,17 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-[#1A1F2C] to-gray-900 py-16">
       <div className="container mx-auto px-4">
+        <div className="flex justify-start mb-8">
+          <Button 
+            onClick={() => navigate("/")}
+            variant="outline"
+            className="border-white text-white hover:bg-white hover:text-gray-900"
+          >
+            <Home className="mr-2 h-4 w-4" />
+            Back to Home
+          </Button>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
