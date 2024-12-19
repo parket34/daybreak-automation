@@ -83,6 +83,52 @@ const Index = () => {
           ))}
         </motion.div>
 
+        {/* New Benefits Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="mt-20"
+        >
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Measurable Benefits of AI Implementation
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                metric: "20+ Hours",
+                label: "Saved Per Week",
+                description: "Automate repetitive tasks and streamline workflows"
+              },
+              {
+                metric: "35%",
+                label: "Revenue Increase",
+                description: "Through optimized operations and enhanced decision making"
+              },
+              {
+                metric: "60%",
+                label: "Error Reduction",
+                description: "Minimize human error in critical processes"
+              },
+              {
+                metric: "24/7",
+                label: "Operation Capability",
+                description: "Continuous automated processing without interruption"
+              }
+            ].map((benefit, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                className="bg-[#1A1F2C]/80 p-8 rounded-xl border border-gray-800 hover:border-[#9b87f5] transition-colors text-center"
+              >
+                <h3 className="text-4xl font-bold text-[#9b87f5] mb-2">{benefit.metric}</h3>
+                <h4 className="text-xl font-semibold text-white mb-3">{benefit.label}</h4>
+                <p className="text-gray-400 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
