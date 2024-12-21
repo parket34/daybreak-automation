@@ -20,7 +20,7 @@ const Index = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-6xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#9b87f5] to-[#1EAEDB]">
+          <h1 className="text-6xl font-bold font-helvetica text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#9b87f5] to-[#1EAEDB]">
             DayBreak AI
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
