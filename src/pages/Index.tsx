@@ -8,7 +8,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handleBooking = () => {
-    window.open('https://calendly.com/tomparker-8be/asi-booking', '_blank');
+    window.open('https://calendly.com/tomparker-8be/ai-discovery-call', '_blank');
   };
 
   return (
@@ -39,7 +39,7 @@ const Index = () => {
               className="bg-[#9b87f5] hover:bg-[#8a74f4] text-white"
             >
               <Calendar className="mr-2 h-4 w-4" />
-              Book a Consultation
+              Book a Discovery Call
             </Button>
             <Button 
               onClick={() => navigate("/services")}
