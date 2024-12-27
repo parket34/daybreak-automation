@@ -8,7 +8,8 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handleBooking = () => {
-    window.open('https://calendly.com/tomparker-8be/ai-discovery-call', '_blank');
+    const calendlyUrl = "https://calendly.com/tomparker-8be/ai-discovery-call";
+    window.open(calendlyUrl, '_blank');
   };
 
   return (
