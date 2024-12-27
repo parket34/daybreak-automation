@@ -107,7 +107,7 @@ const Index = () => {
                 expandedDetails: "By leveraging predictive analytics and automated customer engagement, businesses see significant revenue growth. This includes improved lead conversion rates, optimized pricing strategies, and increased customer lifetime value through personalized experiences."
               },
               {
-                metric: "60%",
+                metric: "80%",
                 label: "Error Reduction",
                 description: "Minimize human error in critical processes",
                 expandedDetails: "AI-powered validation and verification systems catch errors in real-time, ensuring data accuracy and compliance. This leads to reduced rework, improved quality control, and enhanced regulatory compliance across all business processes."
