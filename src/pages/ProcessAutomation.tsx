@@ -7,7 +7,7 @@ const ProcessAutomation = () => {
   const navigate = useNavigate();
 
   const handleBooking = () => {
-    window.open('https://calendly.com/tomparker-8be/asi-booking', '_blank');
+    window.open('https://calendly.com/tomparker-8be/ai-discovery-call', '_blank');
   };
 
   return (
@@ -62,7 +62,7 @@ const ProcessAutomation = () => {
                 size="lg"
                 className="bg-[#9b87f5] hover:bg-[#8a74f4] text-white"
               >
-                Book a Consultation
+                Book a Discovery Call
               </Button>
             </div>
           </div>

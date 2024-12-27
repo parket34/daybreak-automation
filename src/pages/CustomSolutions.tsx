@@ -7,7 +7,7 @@ const CustomSolutions = () => {
   const navigate = useNavigate();
 
   const handleBooking = () => {
-    window.open('https://calendly.com/tomparker-8be/asi-booking', '_blank');
+    window.open('https://calendly.com/tomparker-8be/ai-discovery-call', '_blank');
   };
 
   return (
@@ -27,11 +27,11 @@ const CustomSolutions = () => {
             ← Back to Services
           </Button>
           
-          <h1 className="text-4xl font-bold text-white mb-6">Custom AI Solutions</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Custom AI Development</h1>
           
           <div className="prose prose-invert max-w-none">
             <p className="text-gray-300 text-xl mb-8">
-              Tailored AI solutions designed specifically for your business needs, ensuring maximum impact and ROI.
+              Tailored AI solutions designed to address your specific business challenges and objectives.
             </p>
 
             <div className="bg-[#1A1F2C] p-8 rounded-xl border border-gray-800 mb-8">
@@ -39,7 +39,7 @@ const CustomSolutions = () => {
               <ul className="space-y-4">
                 <li className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-[#9b87f5] rounded-full mr-3"></span>
-                  Custom AI Model Development
+                  Custom AI Models
                 </li>
                 <li className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-[#9b87f5] rounded-full mr-3"></span>
@@ -51,7 +51,7 @@ const CustomSolutions = () => {
                 </li>
                 <li className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-[#9b87f5] rounded-full mr-3"></span>
-                  Ongoing Support & Maintenance
+                  Ongoing Support
                 </li>
               </ul>
             </div>
@@ -62,7 +62,7 @@ const CustomSolutions = () => {
                 size="lg"
                 className="bg-[#9b87f5] hover:bg-[#8a74f4] text-white"
               >
-                Book a Consultation
+                Book a Discovery Call
               </Button>
             </div>
           </div>

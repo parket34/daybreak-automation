@@ -7,7 +7,7 @@ const DataAnalytics = () => {
   const navigate = useNavigate();
 
   const handleBooking = () => {
-    window.open('https://calendly.com/tomparker-8be/asi-booking', '_blank');
+    window.open('https://calendly.com/tomparker-8be/ai-discovery-call', '_blank');
   };
 
   return (
@@ -31,7 +31,7 @@ const DataAnalytics = () => {
           
           <div className="prose prose-invert max-w-none">
             <p className="text-gray-300 text-xl mb-8">
-              Harness the power of data with our advanced analytics solutions to make informed decisions and predict future trends.
+              Make informed decisions with AI-powered analytics that forecast trends and identify opportunities.
             </p>
 
             <div className="bg-[#1A1F2C] p-8 rounded-xl border border-gray-800 mb-8">
@@ -43,15 +43,15 @@ const DataAnalytics = () => {
                 </li>
                 <li className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-[#9b87f5] rounded-full mr-3"></span>
-                  Predictive Modeling
+                  Trend Forecasting
                 </li>
                 <li className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-[#9b87f5] rounded-full mr-3"></span>
-                  Real-time Analytics
+                  Risk Analysis
                 </li>
                 <li className="flex items-center text-gray-300">
                   <span className="w-2 h-2 bg-[#9b87f5] rounded-full mr-3"></span>
-                  Data Visualization
+                  Performance Optimization
                 </li>
               </ul>
             </div>
@@ -62,7 +62,7 @@ const DataAnalytics = () => {
                 size="lg"
                 className="bg-[#9b87f5] hover:bg-[#8a74f4] text-white"
               >
-                Book a Consultation
+                Book a Discovery Call
               </Button>
             </div>
           </div>
