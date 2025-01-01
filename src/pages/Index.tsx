@@ -13,7 +13,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#243949] via-[#517fa4] to-[#243949] flex flex-col">
+    <div className="min-h-screen bg-[#0A0B1E] flex flex-col">
       <div className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,10 +21,20 @@ const Index = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-6xl font-bold font-helvetica text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#33C3F0] to-[#1EAEDB]">
+          <div className="flex justify-center mb-8">
+            <motion.img
+              src="/lovable-uploads/35c9c6b4-4673-4883-8b60-855e89214c3b.png"
+              alt="DayBreak AI Logo"
+              className="h-32 w-32"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
+          <h1 className="text-6xl font-bold font-helvetica text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] to-[#0099FF]">
             DayBreak AI
           </h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-[#B4B4FF] mb-8 max-w-2xl mx-auto">
             Empowering businesses with cutting-edge AI solutions. Transform your operations and unlock new possibilities with our intelligent automation platform.
           </p>
           
@@ -37,7 +47,7 @@ const Index = () => {
             <Button 
               onClick={handleBooking}
               size="lg"
-              className="bg-[#1EAEDB] hover:bg-[#0EA5E9] text-white"
+              className="bg-[#00FFFF] hover:bg-[#00CCFF] text-[#0A0B1E] font-semibold"
             >
               <Calendar className="mr-2 h-4 w-4" />
               Book a Discovery Call
@@ -46,7 +56,7 @@ const Index = () => {
               onClick={() => navigate("/services")}
               variant="outline"
               size="lg"
-              className="text-white border-white hover:bg-white/10 hover:scale-105 transition-transform"
+              className="text-[#00FFFF] border-[#00FFFF] hover:bg-[#00FFFF]/10 hover:scale-105 transition-transform"
             >
               Explore Services
             </Button>
@@ -76,10 +86,10 @@ const Index = () => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="bg-white/5 backdrop-blur-lg p-8 rounded-xl border border-white/10 hover:border-[#1EAEDB] transition-colors"
+              className="bg-[#1A1B3F]/40 backdrop-blur-lg p-8 rounded-xl border border-[#00FFFF]/20 hover:border-[#00FFFF] transition-colors"
             >
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-[#00FFFF] mb-4">{feature.title}</h3>
+              <p className="text-[#B4B4FF]">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -90,7 +100,7 @@ const Index = () => {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="mt-20"
         >
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+          <h2 className="text-3xl font-bold text-[#00FFFF] mb-12 text-center">
             Measurable Benefits of AI Implementation
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -126,16 +136,16 @@ const Index = () => {
                   scale: 1.05,
                   transition: { duration: 0.2 }
                 }}
-                className="group relative bg-white/5 backdrop-blur-lg p-8 rounded-xl border border-white/10 hover:border-[#1EAEDB] transition-all duration-300 min-h-[200px] hover:min-h-[300px]"
+                className="group relative bg-[#1A1B3F]/40 backdrop-blur-lg p-8 rounded-xl border border-[#00FFFF]/20 hover:border-[#00FFFF] transition-all duration-300 min-h-[200px] hover:min-h-[300px]"
               >
                 <div className="transition-opacity duration-300 group-hover:opacity-0">
-                  <h3 className="text-4xl font-bold text-[#33C3F0] mb-2">{benefit.metric}</h3>
+                  <h3 className="text-4xl font-bold text-[#00FFFF] mb-2">{benefit.metric}</h3>
                   <h4 className="text-xl font-semibold text-white mb-3">{benefit.label}</h4>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <p className="text-[#B4B4FF] text-sm">{benefit.description}</p>
                 </div>
                 
-                <div className="absolute inset-0 p-8 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center bg-[#243949]/90 border border-[#1EAEDB]">
-                  <p className="text-white text-sm leading-relaxed">
+                <div className="absolute inset-0 p-8 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center bg-[#1A1B3F]/95 border border-[#00FFFF]">
+                  <p className="text-[#B4B4FF] text-sm leading-relaxed">
                     {benefit.expandedDetails}
                   </p>
                 </div>
@@ -143,41 +153,6 @@ const Index = () => {
             ))}
           </div>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="mt-20 text-center"
-        >
-          <h2 className="text-3xl font-bold text-white mb-8">Why Choose DayBreak AI?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Cutting-edge Technology",
-                description: "Access to the latest AI and machine learning technologies"
-              },
-              {
-                title: "Expert Team",
-                description: "Dedicated AI specialists and solution architects"
-              },
-              {
-                title: "Scalable Solutions",
-                description: "Grow and adapt your AI capabilities as your business evolves"
-              },
-              {
-                title: "ROI Focused",
-                description: "Measurable results and clear business value"
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg p-6 rounded-lg border border-white/10">
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
       </div>
       <Footer />
     </div>
