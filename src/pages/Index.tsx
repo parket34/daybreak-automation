@@ -13,7 +13,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0B1E] flex flex-col">
+    <div className="min-h-screen bg-gradient-to-r from-[#243949] to-[#517fa4] flex flex-col">
       <div className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,20 +21,10 @@ const Index = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="flex justify-center mb-8">
-            <motion.img
-              src="/lovable-uploads/35c9c6b4-4673-4883-8b60-855e89214c3b.png"
-              alt="DayBreak AI Logo"
-              className="h-32 w-32"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-          <h1 className="text-6xl font-bold font-helvetica text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] to-[#0099FF]">
+          <h1 className="text-6xl font-bold font-helvetica text-white mb-6">
             DayBreak AI
           </h1>
-          <p className="text-xl text-[#B4B4FF] mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Empowering businesses with cutting-edge AI solutions. Transform your operations and unlock new possibilities with our intelligent automation platform.
           </p>
           
@@ -47,7 +37,7 @@ const Index = () => {
             <Button 
               onClick={handleBooking}
               size="lg"
-              className="bg-[#00FFFF] hover:bg-[#00CCFF] text-[#0A0B1E] font-semibold"
+              className="bg-[#1EAEDB] hover:bg-[#33C3F0] text-white font-semibold"
             >
               <Calendar className="mr-2 h-4 w-4" />
               Book a Discovery Call
@@ -56,7 +46,7 @@ const Index = () => {
               onClick={() => navigate("/services")}
               variant="outline"
               size="lg"
-              className="text-[#00FFFF] border-[#00FFFF] hover:bg-[#00FFFF]/10 hover:scale-105 transition-transform"
+              className="text-white border-white hover:bg-white/10 hover:scale-105 transition-transform"
             >
               Explore Services
             </Button>
@@ -86,10 +76,10 @@ const Index = () => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="bg-[#1A1B3F]/40 backdrop-blur-lg p-8 rounded-xl border border-[#00FFFF]/20 hover:border-[#00FFFF] transition-colors"
+              className="bg-white/10 backdrop-blur-lg p-8 rounded-xl border border-white/20 hover:border-white/40 transition-colors"
             >
-              <h3 className="text-xl font-semibold text-[#00FFFF] mb-4">{feature.title}</h3>
-              <p className="text-[#B4B4FF]">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+              <p className="text-white/80">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>
