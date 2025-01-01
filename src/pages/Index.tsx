@@ -13,7 +13,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-[#1A1F2C] to-gray-900 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-[#243949] via-[#517fa4] to-[#243949] flex flex-col">
       <div className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,10 +21,10 @@ const Index = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-6xl font-bold font-helvetica text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#9b87f5] to-[#1EAEDB]">
+          <h1 className="text-6xl font-bold font-helvetica text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#33C3F0] to-[#1EAEDB]">
             DayBreak AI
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             Empowering businesses with cutting-edge AI solutions. Transform your operations and unlock new possibilities with our intelligent automation platform.
           </p>
           
@@ -37,7 +37,7 @@ const Index = () => {
             <Button 
               onClick={handleBooking}
               size="lg"
-              className="bg-[#9b87f5] hover:bg-[#8a74f4] text-white"
+              className="bg-[#1EAEDB] hover:bg-[#0EA5E9] text-white"
             >
               <Calendar className="mr-2 h-4 w-4" />
               Book a Discovery Call
@@ -46,7 +46,7 @@ const Index = () => {
               onClick={() => navigate("/services")}
               variant="outline"
               size="lg"
-              className="text-white border-white hover:bg-white hover:text-gray-900 hover:scale-105 transition-transform"
+              className="text-white border-white hover:bg-white/10 hover:scale-105 transition-transform"
             >
               Explore Services
             </Button>
@@ -76,10 +76,10 @@ const Index = () => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="bg-[#1A1F2C] p-8 rounded-xl border border-gray-800 hover:border-[#9b87f5] transition-colors"
+              className="bg-white/5 backdrop-blur-lg p-8 rounded-xl border border-white/10 hover:border-[#1EAEDB] transition-colors"
             >
               <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <p className="text-gray-300">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -126,15 +126,15 @@ const Index = () => {
                   scale: 1.05,
                   transition: { duration: 0.2 }
                 }}
-                className="group relative bg-[#1A1F2C]/80 p-8 rounded-xl border border-gray-800 hover:border-[#9b87f5] transition-all duration-300 min-h-[200px] hover:min-h-[300px]"
+                className="group relative bg-white/5 backdrop-blur-lg p-8 rounded-xl border border-white/10 hover:border-[#1EAEDB] transition-all duration-300 min-h-[200px] hover:min-h-[300px]"
               >
                 <div className="transition-opacity duration-300 group-hover:opacity-0">
-                  <h3 className="text-4xl font-bold text-[#9b87f5] mb-2">{benefit.metric}</h3>
+                  <h3 className="text-4xl font-bold text-[#33C3F0] mb-2">{benefit.metric}</h3>
                   <h4 className="text-xl font-semibold text-white mb-3">{benefit.label}</h4>
-                  <p className="text-gray-400 text-sm">{benefit.description}</p>
+                  <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
                 
-                <div className="absolute inset-0 p-8 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center bg-[#1A1F2C] border border-[#9b87f5]">
+                <div className="absolute inset-0 p-8 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center bg-[#243949]/90 border border-[#1EAEDB]">
                   <p className="text-white text-sm leading-relaxed">
                     {benefit.expandedDetails}
                   </p>
@@ -170,9 +170,9 @@ const Index = () => {
                 description: "Measurable results and clear business value"
               }
             ].map((benefit, index) => (
-              <div key={index} className="bg-[#1A1F2C]/50 p-6 rounded-lg">
+              <div key={index} className="bg-white/5 backdrop-blur-lg p-6 rounded-lg border border-white/10">
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-400 text-sm">{benefit.description}</p>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
             ))}
           </div>
